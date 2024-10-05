@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Improved Book-like Image Display</title>
+    <title>My Baby Album</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -12,12 +12,16 @@
             max-width: 800px;
             margin: 0 auto;
             padding: 20px;
+            background-color: #f0f0f0;
         }
         .book {
             width: 100%;
             height: 600px;
             position: relative;
             perspective: 1500px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            background-color: white;
         }
         .page {
             position: absolute;
@@ -26,9 +30,10 @@
             top: 0;
             right: 0;
             transform-origin: left center;
-            transition: transform 0.8s;
+            transition: transform 0.6s cubic-bezier(0.645, 0.045, 0.355, 1);
             transform-style: preserve-3d;
             z-index: 1;
+            cursor: pointer;
         }
         .page-front, .page-back {
             position: absolute;
@@ -37,6 +42,7 @@
             backface-visibility: hidden;
             background-size: cover;
             background-position: center;
+            border-radius: 0 5px 5px 0;
         }
         .page-back {
             transform: rotateY(180deg);
@@ -50,53 +56,52 @@
         .book:hover .page:nth-child(2) {
             display: block;
         }
-        .section {
-            margin-bottom: 40px;
-        }
         .text {
-            background-color: #f4f4f4;
+            background-color: #ffffff;
             padding: 20px;
             border-radius: 5px;
             margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        h1, h2 {
+            color: #2c3e50;
         }
     </style>
 </head>
 <body>
-    <div class="section">
-        <div class="text">
-            <h2>First Days</h2>
-            <p>This is how I looked when I was born: a tiny burrito wrapped in blankets, with a squished potato face, wrinkly like a raisin, and hair that looked like it was styled by a static balloon! Definitely ready to take on the world… or maybe just nap.</p>
+    <h1>My Baby Album</h1>
+    
+    <div class="text">
+        <h2>First Days</h2>
+        <p>This is how I looked when I was born: a tiny burrito wrapped in blankets, with a squished potato face, wrinkly like a raisin, and hair that looked like it was styled by a static balloon! Definitely ready to take on the world… or maybe just nap.</p>
+    </div>
+    <div class="book">
+        <div class="page">
+            <div class="page-front" style="background-image: url('PXL_20240802_040414000.PORTRAIT.jpg');"></div>
+            <div class="page-back" style="background-image: url('PXL_20240801_223932447.RAW-01.MP.COVER.jpg');"></div>
         </div>
-        <div class="book">
-            <div class="page">
-                <div class="page-front" style="background-image: url('PXL_20240802_040414000.PORTRAIT.jpg');"></div>
-                <div class="page-back" style="background-image: url('PXL_20240801_223932447.RAW-01.MP.COVER.jpg');"></div>
-            </div>
-            <div class="page">
-                <div class="page-front" style="background-image: url('PXL_20240801_223932447.RAW-01.MP.COVER.jpg');"></div>
-                <div class="page-back" style="background-image: url('PXL_20240801_225544162.RAW-01.COVER.jpg');"></div>
-            </div>
-            <div class="page">
-                <div class="page-front" style="background-image: url('PXL_20240801_225544162.RAW-01.COVER.jpg');"></div>
-                <div class="page-back" style="background-image: url('PXL_20240802_040414000.PORTRAIT.jpg');"></div>
-            </div>
+        <div class="page">
+            <div class="page-front" style="background-image: url('PXL_20240801_223932447.RAW-01.MP.COVER.jpg');"></div>
+            <div class="page-back" style="background-image: url('PXL_20240801_225544162.RAW-01.COVER.jpg');"></div>
+        </div>
+        <div class="page">
+            <div class="page-front" style="background-image: url('PXL_20240801_225544162.RAW-01.COVER.jpg');"></div>
+            <div class="page-back" style="background-image: url('PXL_20240802_040414000.PORTRAIT.jpg');"></div>
         </div>
     </div>
 
-    <div class="section">
-        <div class="text">
-            <h2>Family Moments</h2>
-            <p>Here I am, cozy in the lap of my sweet sister! She's holding me like a pro, already showing off her big sister skills. I'm snuggled up and loving the extra attention, while she beams proudly like she's been waiting for this moment forever!</p>
+    <div class="text">
+        <h2>Family Moments</h2>
+        <p>Here I am, cozy in the lap of my sweet sister! She's holding me like a pro, already showing off her big sister skills. I'm snuggled up and loving the extra attention, while she beams proudly like she's been waiting for this moment forever!</p>
+    </div>
+    <div class="book">
+        <div class="page">
+            <div class="page-front" style="background-image: url('PXL_20240801_225648983.RAW-02.ORIGINAL.dng');"></div>
+            <div class="page-back" style="background-image: url('PXL_20240802_023154578.PORTRAIT.ORIGINAL.jpg');"></div>
         </div>
-        <div class="book">
-            <div class="page">
-                <div class="page-front" style="background-image: url('PXL_20240801_225648983.RAW-02.ORIGINAL.dng');"></div>
-                <div class="page-back" style="background-image: url('PXL_20240802_023154578.PORTRAIT.ORIGINAL.jpg');"></div>
-            </div>
-            <div class="page">
-                <div class="page-front" style="background-image: url('PXL_20240802_023154578.PORTRAIT.ORIGINAL.jpg');"></div>
-                <div class="page-back" style="background-image: url('PXL_20240801_225648983.RAW-02.ORIGINAL.dng');"></div>
-            </div>
+        <div class="page">
+            <div class="page-front" style="background-image: url('PXL_20240802_023154578.PORTRAIT.ORIGINAL.jpg');"></div>
+            <div class="page-back" style="background-image: url('PXL_20240801_225648983.RAW-02.ORIGINAL.dng');"></div>
         </div>
     </div>
 </body>
