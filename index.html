@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Book-like Image Display</title>
+    <title>Improved Book-like Image Display</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -20,19 +20,15 @@
             perspective: 1500px;
         }
         .page {
-            width: 50%;
-            height: 100%;
             position: absolute;
+            width: 100%;
+            height: 100%;
             top: 0;
             right: 0;
             transform-origin: left center;
-            transition: transform 1.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+            transition: transform 0.8s;
             transform-style: preserve-3d;
-            cursor: pointer;
-        }
-        .page:nth-child(even) {
-            right: 50%;
-            transform-origin: right center;
+            z-index: 1;
         }
         .page-front, .page-back {
             position: absolute;
@@ -45,11 +41,14 @@
         .page-back {
             transform: rotateY(180deg);
         }
-        .page:hover {
+        .page:not(:first-child) {
+            display: none;
+        }
+        .book:hover .page:first-child {
             transform: rotateY(-180deg);
         }
-        .page:nth-child(even):hover {
-            transform: rotateY(180deg);
+        .book:hover .page:nth-child(2) {
+            display: block;
         }
         .section {
             margin-bottom: 40px;
@@ -74,8 +73,12 @@
                 <div class="page-back" style="background-image: url('PXL_20240801_223932447.RAW-01.MP.COVER.jpg');"></div>
             </div>
             <div class="page">
-                <div class="page-front" style="background-image: url('PXL_20240801_225544162.RAW-01.COVER.jpg');"></div>
+                <div class="page-front" style="background-image: url('PXL_20240801_223932447.RAW-01.MP.COVER.jpg');"></div>
                 <div class="page-back" style="background-image: url('PXL_20240801_225544162.RAW-01.COVER.jpg');"></div>
+            </div>
+            <div class="page">
+                <div class="page-front" style="background-image: url('PXL_20240801_225544162.RAW-01.COVER.jpg');"></div>
+                <div class="page-back" style="background-image: url('PXL_20240802_040414000.PORTRAIT.jpg');"></div>
             </div>
         </div>
     </div>
@@ -92,7 +95,7 @@
             </div>
             <div class="page">
                 <div class="page-front" style="background-image: url('PXL_20240802_023154578.PORTRAIT.ORIGINAL.jpg');"></div>
-                <div class="page-back" style="background-image: url('PXL_20240802_023154578.PORTRAIT.ORIGINAL.jpg');"></div>
+                <div class="page-back" style="background-image: url('PXL_20240801_225648983.RAW-02.ORIGINAL.dng');"></div>
             </div>
         </div>
     </div>
