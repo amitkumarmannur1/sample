@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Static Webpage</title>
+    <title>Book-like Image Display</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -13,6 +13,44 @@
             margin: 0 auto;
             padding: 20px;
         }
+        .book {
+            width: 100%;
+            height: 600px;
+            position: relative;
+            perspective: 1500px;
+        }
+        .page {
+            width: 50%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            right: 0;
+            transform-origin: left center;
+            transition: transform 1.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+            transform-style: preserve-3d;
+            cursor: pointer;
+        }
+        .page:nth-child(even) {
+            right: 50%;
+            transform-origin: right center;
+        }
+        .page-front, .page-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            background-size: cover;
+            background-position: center;
+        }
+        .page-back {
+            transform: rotateY(180deg);
+        }
+        .page:hover {
+            transform: rotateY(-180deg);
+        }
+        .page:nth-child(even):hover {
+            transform: rotateY(180deg);
+        }
         .section {
             margin-bottom: 40px;
         }
@@ -20,113 +58,43 @@
             background-color: #f4f4f4;
             padding: 20px;
             border-radius: 5px;
-        }
-        .image_center {
-            width: 100%;
-            height: 600px;
-            background-size: cover;
-            background-position: center;
-            border-radius: 5px;
-        }
-        .image_top {
-            width: 100%;
-            height: 600px;
-            background-size: cover;
-            background-position: top;
-            border-radius: 5px;
-        }
-        .image_bottom {
-            width: 100%;
-            height: 600px;
-            background-size: cover;
-            background-position: bottom;
-            border-radius: 5px;
-        }
-        .image_custom {
-            width: 100%;
-            height: 800px;
-            background-size: cover;
-            background-position: center;
-            border-radius: 5px;
+            margin-bottom: 20px;
         }
     </style>
 </head>
 <body>
-<div class="section">
+    <div class="section">
         <div class="text">
+            <h2>First Days</h2>
             <p>This is how I looked when I was born: a tiny burrito wrapped in blankets, with a squished potato face, wrinkly like a raisin, and hair that looked like it was styled by a static balloon! Definitely ready to take on the world… or maybe just nap.</p>
         </div>
-    </div>
-    
-    <div class="section">
-        <div class="image_top" style="background-image: url('PXL_20240802_040414000.PORTRAIT.jpg');"></div>
-    </div>
-    
-    <div class="section">
-        <div class="text">
-            <p>My Grandma was the first to hold me after my mom and dad in the hospital room. Her face lit up with joy, and she was so gentle. It was a special moment for her, being the first one to hold me outside of my parents..</p>
+        <div class="book">
+            <div class="page">
+                <div class="page-front" style="background-image: url('PXL_20240802_040414000.PORTRAIT.jpg');"></div>
+                <div class="page-back" style="background-image: url('PXL_20240801_223932447.RAW-01.MP.COVER.jpg');"></div>
+            </div>
+            <div class="page">
+                <div class="page-front" style="background-image: url('PXL_20240801_225544162.RAW-01.COVER.jpg');"></div>
+                <div class="page-back" style="background-image: url('PXL_20240801_225544162.RAW-01.COVER.jpg');"></div>
+            </div>
         </div>
-    </div>
-    
-    <div class="section">
-        <div class="image_center" style="background-image: url('PXL_20240801_223932447.RAW-01.MP.COVER.jpg');"></div>
-    </div>
-
-
-    <div class="section">
-        <div class="text">
-            <p>My Grandma was the first to hold me after my mom and dad in the hospital room. She was so gentle and filled with joy. I received so much love and many gifts from her, making my arrival even more special. Grandma's warmth made those first moments unforgettable..</p>
-        </div>
-    </div>
-    
-    <div class="section">
-        <div class="image_center" style="background-image: url('PXL_20240801_225544162.RAW-01.COVER.jpg');"></div>
-    </div>
-
-    
-    <div class="section">
-        <div class="text">
-            <p>My Grandma was all set with the traditional gear as soon as I was born! I barely opened my eyes before I was wrapped in a little outfit, complete with tiny bangles and a dot on my forehead. She was ready to turn me into the cutest cultural bundle.</p>
-        </div>
-    </div>
-    
-    <div class="section">
-        <div class="image_center" style="background-image: url('PXL_20240801_225648983.RAW-02.ORIGINAL.dng');"></div>
     </div>
 
     <div class="section">
         <div class="text">
-            <p>Here I am, cozy in the lap of my sweet sister! She's holding me like a pro, already showing off her big sister skills. I'm snuggled up and loving the extra attention, while she beams proudly like she's been waiting for this moment forever!.</p>
+            <h2>Family Moments</h2>
+            <p>Here I am, cozy in the lap of my sweet sister! She's holding me like a pro, already showing off her big sister skills. I'm snuggled up and loving the extra attention, while she beams proudly like she's been waiting for this moment forever!</p>
+        </div>
+        <div class="book">
+            <div class="page">
+                <div class="page-front" style="background-image: url('PXL_20240801_225648983.RAW-02.ORIGINAL.dng');"></div>
+                <div class="page-back" style="background-image: url('PXL_20240802_023154578.PORTRAIT.ORIGINAL.jpg');"></div>
+            </div>
+            <div class="page">
+                <div class="page-front" style="background-image: url('PXL_20240802_023154578.PORTRAIT.ORIGINAL.jpg');"></div>
+                <div class="page-back" style="background-image: url('PXL_20240802_023154578.PORTRAIT.ORIGINAL.jpg');"></div>
+            </div>
         </div>
     </div>
-    
-    <div class="section">
-        <div class="image_custom" style="background-image: url('PXL_20240802_023154578.PORTRAIT.ORIGINAL.jpg');"></div>
-    </div>
-
-    <div class="section">
-        <div class="text">
-            <p>This is the gvhgvghvtion. Another 50 characters can go here.</p>
-        </div>
-    </div>
-    
-    <div class="section">
-        <div class="image" style="background-image: url('https://photos.google.com/share/AF1QipNjSUep5k8pOwIM2esqidau2YGVwAU5fd7R_bo_rlHlvBHlx0lZKJJuEy4ufEP7_A/photo/AF1QipOL4EZozvrQ-hfRYsQEkIimWg-A9gjkfaDek5iM?key=Z0YtbjVjZDlDazd6RlpuWDNFVjJKRUdKRERPYUVn');"></div>
-    </div>
-
-    <!-- You can add more sections by copying and pasting the above structure -->
-
-    <script>
-        // Function to change images periodically
-        function changeImages() {
-            const images = document.querySelectorAll('.image');
-            images.forEach((img, index) => {
-                img.style.backgroundImage = `url('PXL_20241004_021106563.RAW-01.COVER.jpg')`;
-            });
-        }
-
-        // Change images every 5 seconds
-        //setInterval(changeImages, 5000);
-    </script>
 </body>
 </html>
