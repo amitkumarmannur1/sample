@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Static Webpage</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .section {
+            margin-bottom: 40px;
+        }
+        .text {
+            background-color: #f4f4f4;
+            padding: 20px;
+            border-radius: 5px;
+        }
+        .image {
+            width: 100%;
+            height: 300px;
+            background-size: cover;
+            background-position: center;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="section">
+        <div class="text">
+            <p>This is the first text section. You can add about 50 characters here.</p>
+        </div>
+    </div>
+    
+    <div class="section">
+        <div class="image" style="background-image: url('https://via.placeholder.com/800x300.png?text=Image+1');"></div>
+    </div>
+    
+    <div class="section">
+        <div class="text">
+            <p>This is the second text section. Another 50 characters can go here.</p>
+        </div>
+    </div>
+    
+    <div class="section">
+        <div class="image" style="background-image: url('https://via.placeholder.com/800x300.png?text=Image+2');"></div>
+    </div>
+
+    <!-- You can add more sections by copying and pasting the above structure -->
+
+    <script>
+        // Function to change images periodically
+        function changeImages() {
+            const images = document.querySelectorAll('.image');
+            images.forEach((img, index) => {
+                img.style.backgroundImage = `url('https://via.placeholder.com/800x300.png?text=Image+${index + 1}&random=${Math.random()}')`;
+            });
+        }
+
+        // Change images every 5 seconds
+        setInterval(changeImages, 5000);
+    </script>
+</body>
+</html>
