@@ -1,14 +1,85 @@
 {
-  "1": "This is how I looked when I was born: a tiny burrito wrapped in blankets, with a squished potato face, wrinkly like a raisin, and hair that looked like it was styled by a static balloon! Definitely ready to take on the world… or maybe just nap.",
-  "2": "Here I am, cozy in the lap of my sweet sister! She's holding me like a pro, already showing off her big sister skills. I'm snuggled up and loving the extra attention, while she beams proudly like she's been waiting for this moment forever!",
-  "3": "I was welcomed with warm hugs, balloons, and excited faces as I entered the world. Everyone was eager to meet me and shower me with love from the very beginning!",
-  "4": "My tiny fingers were so small and delicate, everyone marveled at how perfect they were. I would grasp anything near me, holding tight to my new world with wonder.",
-  "5": "My first bath was an adventure! I splashed around as water swirled, feeling the gentle touch of warm water for the first time—tiny but already full of joy!",
-  "6": "This is how Pop gets me dressed: quick, playful, and often with mismatched socks! But I still look adorable, and his laughter makes everything more fun.",
-  "7": "When Mom dresses me, everything feels just right. Snug and cozy in the softest outfits, she ensures I’m warm, comfy, and ready to face the day ahead with love.",
-  "8": "Grandma's touch is gentle and slow. She takes her time to make sure I’m perfectly dressed, wrapping me in soft fabrics and always kissing my tiny forehead afterward.",
-  "9": "I sleep with Mom close by, nestled in her arms. Her heartbeat is the rhythm of my dreams, making me feel safe, loved, and ready to take on tomorrow.",
-  "10": "My first diaper load was a big one! I wriggled and kicked as everyone scrambled to clean me up, but I was just too cute to be mad at—tiny but powerful!",
-  "11": "My first temple run was filled with curious eyes. I watched the rituals, wide-eyed and amazed, as I was blessed with love and prayers for my future ahead"
-
+  "entries": [
+    {
+      "index": 1,
+      "content": "This is how I looked when I was born: a tiny burrito wrapped in blankets, with a squished potato face, wrinkly like a raisin, and hair that looked like it was styled by a static balloon! Definitely ready to take on the world… or maybe just nap.",
+      "eventTitle": "First Days",
+      "textId": "firstDaysText",
+      "photos": [
+        "PXL_20240802_040414000.PORTRAIT.jpg",
+        "PXL_20240801_223932447.RAW-01.MP.COVER.jpg",
+        "PXL_20240801_225544162.RAW-01.COVER.jpg"
+      ]
+    },
+    {
+      "index": 2,
+      "content": "Here I am, cozy in the lap of my sweet sister! She's holding me like a pro, already showing off her big sister skills. I'm snuggled up and loving the extra attention, while she beams proudly like she's been waiting for this moment forever!",
+      "eventTitle": "People whom I first met",
+      "textId": "firstmet",
+      "photos": [
+        "PXL_20240802_043504040.RAW-01.MP.COVER.jpg",
+        "PXL_20240802_023205459.RAW-01.COVER.jpg"
+      ]
+    },
+    {
+      "index": 3,
+      "content": "I was welcomed with warm hugs, balloons, and excited faces as I entered the world. Everyone was eager to meet me and shower me with love from the very beginning!",
+      "photos": []
+    },
+    {
+      "index": 4,
+      "content": "My tiny fingers were so small and delicate, everyone marveled at how perfect they were. I would grasp anything near me, holding tight to my new world with wonder.",
+      "eventTitle": "my hospital days",
+      "textId": "myhospital1",
+      "photos": [
+        "PXL_20240803_164428058.PORTRAIT.jpg",
+        "PXL_20240803_164508328.RAW-01.COVER.jpg"
+      ]
+    },
+    {
+      "index": 5,
+      "content": "My first bath was an adventure! I splashed around as water swirled, feeling the gentle touch of warm water for the first time—tiny but already full of joy!",
+      "eventTitle": "my hospital days",
+      "textId": "myhospital",
+      "photos": [
+        "PXL_20240803_164428058.PORTRAIT.jpg",
+        "PXL_20240803_164508328.RAW-01.COVER.jpg"
+      ]
+    },
+    {
+      "index": 6,
+      "content": "This is how Pop gets me dressed: quick, playful, and often with mismatched socks! But I still look adorable, and his laughter makes everything more fun.",
+      "photos": []
+    },
+    {
+      "index": 7,
+      "content": "When Mom dresses me, everything feels just right. Snug and cozy in the softest outfits, she ensures I'm warm, comfy, and ready to face the day ahead with love.",
+      "photos": []
+    },
+    {
+      "index": 8,
+      "content": "Grandma's touch is gentle and slow. She takes her time to make sure I'm perfectly dressed, wrapping me in soft fabrics and always kissing my tiny forehead afterward.",
+      "eventTitle": "my hospital days",
+      "textId": "myhospital2",
+      "photos": [
+        "PXL_20240803_164428058.PORTRAIT.jpg",
+        "PXL_20240803_164508328.RAW-01.COVER.jpg"
+      ]
+    },
+    {
+      "index": 9,
+      "content": "I sleep with Mom close by, nestled in her arms. Her heartbeat is the rhythm of my dreams, making me feel safe, loved, and ready to take on tomorrow.",
+      "photos": []
+    },
+    {
+      "index": 10,
+      "content": "My first diaper load was a big one! I wriggled and kicked as everyone scrambled to clean me up, but I was just too cute to be mad at—tiny but powerful!",
+      "photos": []
+    },
+    {
+      "index": 11,
+      "content": "My first temple run was filled with curious eyes. I watched the rituals, wide-eyed and amazed, as I was blessed with love and prayers for my future ahead",
+      "photos": []
+    }
+  ]
 }
